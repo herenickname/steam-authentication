@@ -1,6 +1,6 @@
 {
 	"name": "steam-authentication",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"description": "Steam authentication package that features robust verification, zero dependencies, and is built on WebAPI fetch.",
 	"main": "dist/cjs/index.js",
 	"module": "dist/esm/index.mjs",
@@ -21,12 +21,22 @@
 		"build:esm": "tsc --outDir dist/esm --module esnext && sh esmfix.sh",
 		"build": "npm run build:cjs && npm run build:esm"
 	},
-	"keywords": [],
 	"author": "herenickname",
 	"license": "MIT",
 	"dependencies": {},
 	"devDependencies": {},
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/herenickname/steam-authentication.git"
+	},
+	"keywords": [
+		"steam",
+		"authentication",
+		"steam-auth",
+		"webapi",
+		"typescript"
+	]
 }

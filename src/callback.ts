@@ -179,7 +179,6 @@ async function validateThroughSteam(searchParams: Record<string, string>) {
 
 	// Read the response text
 	const responseText = await response.text()
-	console.log({ responseText })
 
 	// Verify the response
 	const isValid = responseText === 'ns:http://specs.openid.net/auth/2.0\nis_valid:true\n'
