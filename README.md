@@ -20,6 +20,7 @@ Use the createAuthUrl function to generate a URL for redirecting users to Steam 
 
 ```ts
 import { createAuthUrl } from 'steam-authentication'
+
 const realm = 'https://example.com'
 const returnPath = '/steam/callback'
 const url = createAuthUrl(realm, returnPath)
