@@ -16,14 +16,14 @@ This package provides robust Steam authentication with zero dependencies, built 
 
 ### Creating an Authentication URL
 
-Use the createAuthUrl function to generate a URL for redirecting users to Steam for authentication.
+Use the createAuthenticationUrl function to generate a URL for redirecting users to Steam for authentication.
 
 ```ts
-import { createAuthUrl } from 'steam-authentication'
+import { createAuthenticationUrl } from 'steam-authentication'
 
 const realm = 'https://example.com'
 const returnPath = '/steam/callback'
-const url = createAuthUrl(realm, returnPath)
+const url = createAuthenticationUrl(realm, returnPath)
 
 console.log(url.toString()) // "https://steamcommunity.com/openid/login?..."
 ```

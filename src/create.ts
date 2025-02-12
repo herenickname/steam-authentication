@@ -1,17 +1,17 @@
 /**
  * Creates a URL to redirect the user to in order to authenticate with Steam
  *
- * @function SteamCreateAuthUrl
+ * @function createAuthenticationUrl
  * @param {string} realm The realm URL that identifies your application
  * @param {string} returnPath The path to which the user will be redirected after authentication
  *
  * @example
- * const url = SteamCreateAuthUrl("https://example.com", "/steam/callback")
+ * const url = createAuthenticationUrl("https://example.com", "/steam/callback")
  * response.redirect(url.toString())
  *
  * @returns {URL} The URL object to redirect the user to
  */
-export function createAuthUrl(realm: string, returnPath: string): URL {
+export function createAuthenticationUrl(realm: string, returnPath: string): URL {
 	if (!returnPath.startsWith('/')) {
 		throw new Error('Return path must start with /')
 	}
@@ -32,3 +32,8 @@ export function createAuthUrl(realm: string, returnPath: string): URL {
 
 	return url
 }
+
+/**
+ * @deprecated Use `createAuthenticationUrl` instead
+ */
+export const createAuthUrl = createAuthenticationUrl
